@@ -1,0 +1,20 @@
+{
+    "config": {
+        "iothub_client_trace": {
+            "help": "Enable IoT Hub Client tracing",
+            "value": false
+        }
+    },
+    "target_overrides": {
+         "*": {
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 115200,
+            "target.components_add": ["wifi_ism43362"],
+            "target.network-default-interface-type": "WIFI",
+            "nsapi.default-wifi-security": "WPA_WPA2",
+            "nsapi.default-wifi-ssid": "\"Laevo\"",
+            "nsapi.default-wifi-password": "\"Laevo007!\"",
+            "target.printf_lib": "std" 
+        }
+    }
+}
